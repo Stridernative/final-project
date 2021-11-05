@@ -1,7 +1,11 @@
 class ServicesController < ApplicationController
 
+rescue_from ActiveRecord::RecordNotFound, with: :review_not_found_response
+rescue_from ActiveRecord::RecordInvalid, with: :render_unproccessable_response
+skip_before_action :authorized, only: [:index, :show]
+
     def create
-        services = Service.create(service_params)
+        services = Service.create!(service_params)
         render json: service, status: :created
     end
 
@@ -17,6 +21,14 @@ class ServicesController < ApplicationController
         head :no_content
     end
 
+    def index
+        render json: Service.all, status: :ok
+    end
+
+    def show
+        service = Service.find(params[:id])
+        render json: service, status: :ok
+    end
     
 
     private
@@ -27,5 +39,9 @@ class ServicesController < ApplicationController
 
     def service_not_found_response
         render json: {error: "Service not found"}, status: :not_found
+    end
+
+    def render_unproccessable_response(invalid)
+        render json: {error: invalid.record.errors}, status: unprocessable_entity
     end
 end
