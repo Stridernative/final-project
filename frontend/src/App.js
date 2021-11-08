@@ -1,23 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import NavBar from './NavBar/Index.js';
+import { Routes, Route } from 'react-router-dom';
+import React, { useState } from 'react';
+import Home from './Pages/Home.js';
+import Services from './Pages/Services.js';
+import Appointments from './Pages/Appointments.js';
+import Quotes from './Pages/Quotes.js';
+import Financing from './Pages/Financing.js';
+import Warranties from './Pages/Warranties.js';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+        <NavBar />
+      <Routes>
+        <Route exact path="/" element={<Home/>}/>
+        <Route exact path="/Services" element={<Services/>}/>
+        <Route exact path="/Appointments" element={<Appointments/>}/>
+        <Route exact path="/Quotes" element={<Quotes/>}/>
+        <Route exact path="/Warranties" element={<Warranties/>}/>
+        <Route exact path="/Financing" element={<Financing/>}/>
+        </Routes>
     </div>
   );
 }
