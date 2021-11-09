@@ -8,6 +8,7 @@ import Appointments from './Pages/Appointments.js';
 import Quotes from './Pages/Quotes.js';
 import Financing from './Pages/Financing.js';
 import Warranties from './Pages/Warranties.js';
+import HassleFree from './Pages/HassleFree';
 
 
 function App() {
