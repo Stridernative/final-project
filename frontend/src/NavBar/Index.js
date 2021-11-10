@@ -1,71 +1,101 @@
 import React, { useState } from 'react';
-import {Nav, NavLink, Bars, NavMenu, NavBtn, NavBtnLink} from './NavBarElements';
+// import {Nav, NavLink, Bars, NavMenu, NavBtn, NavBtnLink} from './NavBarElements';
 import { Link } from 'react-router-dom';
 import { Button } from './Button.js'
 import Dropdown from './Dropdown.js';
+import './NavBar.css'
 
 
-const NavBar = ({ user }) => {
+function NavBar ( ) {
     const [click, setClick] = useState(false);
     const [dropdown, setDropdown] = useState(false);
 
     const handleClick = () => setClick(!click);
     const closeMobileMenu = () => setClick(false);
 
-    const onMouseEnter = () => {
-        if(window.innerWidth < 960) {
-            setDropdown(false);
-        } else{
+    const onMouseEnter= () => {
             setDropdown(true);
         }
-    };
-
-    const  onMouseLeave =  () => {
-        if(window.innerWidth < 960) {
-            setDropdown(false);
-        } else{
+    
+    const  onMouseLeave = () => {
              setDropdown(false);
         }
-    };
+
 
 
     return (
 <>
-    <Nav className ='navbar'>
-      <NavLink to="/" className='navbar-logo'>
-        <h1> Tire Pros Logo</h1>
-        </NavLink>
-        <Bars />
-        <NavMenu>
-            <NavLink to="/Services" activeStyle>
-            Services
-            </NavLink>
-            <NavLink to="/Appointments" activeStyle>
-            Appointments
-            </NavLink>
-            <NavLink to="/Quotes" activeStyle>
-            Quotes
-            </NavLink>
-          
+    <nav className ='navbar'>
+      <Link to="/" className='navbar-logo'>
+        Tire Pros Logo
+        <i class='fab fa-firstdraft' />
+        </Link>
+        <div className='menu-icon' onClick={handleClick}>
+            <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
+        </div>
+        <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+            <li className='nav-item'>
+                <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+                    Home
+                </Link>
+            </li>
+
+            <li className='nav-item'>
+                <Link to='/Services' className='nav-links' onClick={closeMobileMenu}>
+                    Services
+                </Link>
+            </li>
+
+            <li className='nav-item'>
+                <Link to='/Appointments' className='nav-links' onClick={closeMobileMenu}>
+                    Appointments
+                </Link>
+            </li>
+
             <li className='nav-item'  
                 onMouseEnter={onMouseEnter}
                 onMouseLeave={onMouseLeave}>
                 <Link to='/Warranties' 
-                className='nav-links' 
+                className='nav-links-warranties' 
                 onClick={closeMobileMenu}>
                 Warranties <i className='fas fa-caret-down'/>
                 </Link>
-                {dropdown && <Dropdown />}
+             {dropdown && <Dropdown />}
             </li>
-            
-            <NavLink to="/Financing" activeStyle>
+
+            <li className='nav-item'>
+                <Link to='/Quotes' className='nav-links' onClick={closeMobileMenu}>
+                    Quotes
+                </Link>
+            </li>
+
+            <li className='nav-item'>
+                <Link to='/Login' className='nav-links-mobile' onClick={closeMobileMenu}>
+                    Login
+                </Link>
+            </li>
+        </ul>
+        <Button />
+        </nav>
+        {/* <Bars /> */}
+        {/* <NavMenu> */}
+            {/* <Link to="/Services" activeStyle>
+            Services
+            </Link>
+            <Link to="/Appointments" activeStyle>
+            Appointments
+            </Link>
+            <Link to="/Quotes" activeStyle>
+            Quotes
+            </Link> */}
+          
+            {/* <Link to="/Financing" activeStyle>
             Financing
-            </NavLink>
-        </NavMenu>
-        <NavBtn>
+            </Link> */}
+        {/* </NavMenu> */}
+        {/* <NavBtn>
         <NavBtnLink to="/login"> Login</NavBtnLink>
-       </NavBtn>
-    </Nav>  
+       </NavBtn> */}
 </>
     );
 };
