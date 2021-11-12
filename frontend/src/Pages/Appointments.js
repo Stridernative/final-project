@@ -1,9 +1,10 @@
 import React from 'react'
+import { InlineWidget } from "react-calendly";
 
 function Appointments(){
     return (
         <div>
-            <h1>Calendly Integration here</h1>
+        <InlineWidget url="https://calendly.com/gabecreacs" />
         </div>
     )
 }
