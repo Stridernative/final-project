@@ -9,6 +9,7 @@ import Quotes from './Pages/Quotes.js';
 import Financing from './Pages/Financing.js';
 import Warranties from './Pages/Warranties.js';
 import HassleFree from './Pages/HassleFree';
+import Login from './Login/Login'
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route exact path="/Quotes" element={<Quotes/>}/>
         <Route exact path="/Warranties" element={<Warranties/>}/>
         <Route exact path="/Financing" element={<Financing/>}/>
+        <Route exact path="/Login" element={<Login/>}/>
         </Routes>
     </div>
   );

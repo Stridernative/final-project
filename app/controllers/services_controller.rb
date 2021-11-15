@@ -2,7 +2,7 @@ class ServicesController < ApplicationController
 
 rescue_from ActiveRecord::RecordNotFound, with: :review_not_found_response
 rescue_from ActiveRecord::RecordInvalid, with: :render_unproccessable_response
-skip_before_action :authorized, only: [:index, :show]
+# skip_before_action :authorized, only: [:index, :show]
 
     def create
         services = Service.create!(service_params)
