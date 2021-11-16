@@ -12,18 +12,22 @@ import HassleFree from './Pages/HassleFree';
 import Login from './Login/Login'
 
 
+
+
 function App() {
+  const [currentUser, setCurrentUser] = useState({})
+
   return (
     <div >
         <NavBar />
       <Routes>
         <Route exact path="/" element={<Home/>}/>
-        <Route exact path="/Services" element={<Services/>}/>
+        <Route exact path="/Services" element={<Services currentUser={currentUser}/>}/>
         <Route exact path="/Appointments" element={<Appointments/>}/>
         <Route exact path="/Quotes" element={<Quotes/>}/>
         <Route exact path="/Warranties" element={<Warranties/>}/>
         <Route exact path="/Financing" element={<Financing/>}/>
-        <Route exact path="/Login" element={<Login/>}/>
+        <Route exact path="/Login"  element={<Login setCurrentUser={setCurrentUser}/>}/>
         </Routes>
     </div>
   );

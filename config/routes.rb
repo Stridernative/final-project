@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :quotes, only: [:create]
   resources :services, only: [:create, :update, :destroy, :index, :show]
-  resources :users 
+  resources :users , only: [:show]
 
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'

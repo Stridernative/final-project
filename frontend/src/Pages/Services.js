@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ServiceCard from './ServiceCard';
 
 
-function Services() {
+function Services({currentUser}) {
     const [theService, setTheService] = useState([])
 
 
@@ -14,13 +14,14 @@ function Services() {
 
     const eachService = theService.map(aService =>
     //    console.log(aService)
-        <ServiceCard
+        <ServiceCard currentUser={currentUser}
         service={aService}
         />
         )
 
     return (
         <div>
+
            {eachService}
         </div>
     )

@@ -15,7 +15,7 @@ function Login({ setCurrentUser }) {
     .then(resp => {
         if (resp.ok) {
             setCurrentUser(null)
-            navigate.push("/")
+            navigate("/")
         }
     })
 }
@@ -38,12 +38,13 @@ function Login({ setCurrentUser }) {
       .then(res => {
         if (res.ok) {
           res.json().then(user => {
+            console.log(user)
             setCurrentUser(user)
-            navigate.push('/services')
+            navigate('/services')
           })
         } else {
           res.json().then(errors => {
-            setErrors(errors)
+            setErrors(errors.errors)
           })
         }
       })
@@ -65,6 +66,7 @@ function Login({ setCurrentUser }) {
     </div>
     <div>
       <button className="log-out-btn" onClick={handleLogout}>Logout</button>
+      {errors}
     </div>
     </div>
   )
