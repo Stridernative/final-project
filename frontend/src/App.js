@@ -10,6 +10,7 @@ import Financing from './Pages/Financing.js';
 import Warranties from './Pages/Warranties.js';
 import HassleFree from './Pages/HassleFree';
 import Login from './Login/Login'
+import EditForm from './Pages/EditForm';
 
 
 
@@ -28,6 +29,7 @@ function App() {
         <Route exact path="/Warranties" element={<Warranties/>}/>
         <Route exact path="/Financing" element={<Financing/>}/>
         <Route exact path="/Login"  element={<Login setCurrentUser={setCurrentUser}/>}/>
+        <Route exact path="/Edit-Service" element={<EditForm/>}/>
         </Routes>
     </div>
   );
