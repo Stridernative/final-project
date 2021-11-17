@@ -2,7 +2,7 @@ import React from 'react'
 
 function HassleFree(){
     return (
-        <div>
+        <div className="services-card-warranty">
             <h1>Hassle-Free. Guaranteed.
 Hassle-Free. Guraranteed.
 WE’RE OUT TO CHANGE THE WAY CUSTOMERS FEEL ABOUT TIRE AND AUTO SERVICE BY MAKING EVERY EXPERIENCE HASSLE-FREE. GUARANTEED.

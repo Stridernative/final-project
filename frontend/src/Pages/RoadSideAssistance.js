@@ -2,7 +2,7 @@ import React from 'react'
 
 function RoadSideAssistance() {
     return (
-        <div>
+        <div className="services-card-warranty">
             Complimentary Roadside Assistance
 Nobody Protects You Like the Pros
 

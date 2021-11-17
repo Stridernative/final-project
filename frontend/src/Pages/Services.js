@@ -20,8 +20,7 @@ function Services({currentUser}) {
         )
 
     return (
-        <div>
-
+        <div className="services-container">
            {eachService}
         </div>
     )

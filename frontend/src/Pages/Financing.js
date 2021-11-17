@@ -2,7 +2,7 @@ import React from 'react'
 
 function Financing(){
     return (
-        <div>
+        <div className="services-card-warranty">
         <h3>
             How Does Snap! Finance Work?
             Here's how it works:

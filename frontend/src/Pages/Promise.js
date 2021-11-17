@@ -2,7 +2,7 @@ import React from 'react'
 
 const Promise = () => {
     return (
-        <div>
+        <div className="services-card-warranty">
             Our $250 Promise at Vista Tire Pros
 Nobody Protects You Like the Pros
 

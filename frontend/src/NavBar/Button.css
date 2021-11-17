@@ -32,7 +32,7 @@
     color: #fff;
     cursor: pointer;
     background-color: var(--primary);
-    position:absolute; right: 78px;
+    position:absolute; bottom: 15px; right: 50px;
   }
 
   .btn-edit:hover {

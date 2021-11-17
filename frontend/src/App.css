@@ -6,11 +6,13 @@
 }
 
 
-.App {
+html {
   text-align: center;
   background-image: url("./Images/ProjectBackground.jpg");
-  background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 /* Login Form */
@@ -169,9 +171,78 @@
   margin: 50px auto;
   width: 900px;
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+  background: linear-gradient(
+    90deg,
+    rgb(153, 0, 0) 0%,
+    rgb(60, 0, 0) 100%
+  );
   position: relative;
   border-radius: 10px;
   height: 600px;
   display: grid;
+  background-color:#fff;
+  color: white
 }
+
+.services-container {
+  display: inline-grid;
+  grid-template-columns: repeat(2, 2fr);
+  justify-content: space-evenly;
+  gap: 10px;
+  
+}
+
+.service-info {
+  display: inline-grid;
+  grid-template-columns: repeat(1, 2fr);
+  justify-content: space-evenly;
+  gap: 10px;
+  
+}
+
+
+
+/* warranty */
+
+
+.services-card-warranty {
+  margin: 50px auto;
+  width: 900px;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+  background: linear-gradient(
+    90deg,
+    rgb(153, 0, 0) 0%,
+    rgb(60, 0, 0) 100%
+  );
+  position: relative;
+  border-radius: 10px;
+  height: 600px;
+  display: grid;
+  background-color:#fff;
+  text-align: center;
+  color: white;
+}
+
+/* Home */
+
+.services-card-Home {
+  margin: 50px auto;
+  width: 700px;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+  background: linear-gradient(
+    90deg,
+    rgb(153, 0, 0) 0%,
+    rgb(60, 0, 0) 100%
+  );
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  border-radius: 10px;
+  height: 400px;
+  display: grid;
+  background-color:#fff;
+  text-align: center;
+  color: white;
+}
+
 

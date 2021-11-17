@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
-import EditForm from './EditForm'
+
 
 function ServiceCard({ service, currentUser }) {
 
@@ -9,6 +9,7 @@ function ServiceCard({ service, currentUser }) {
     function toggleEdit() {
 
         setEditMode(!editMode)
+        console.log(editMode)
     }
 
     const [updatedService, setUpdatedService] = useState({
@@ -51,10 +52,6 @@ function ServiceCard({ service, currentUser }) {
                             <input name="title" value={updatedService.title} onChange={handleInput}></input>
                         </label>
 
-                        <label> Image
-                            <input name="image" value={updatedService.image} onChange={handleInput}></input>
-                        </label>
-
                         <label> Information
                             <input name="information" value={updatedService.information} onChange={handleInput}></input>
                         </label>
@@ -74,9 +71,10 @@ function ServiceCard({ service, currentUser }) {
 
             return (
                 <div className="services-card">
-                    <form>
+                    <form className="service-info">
+                        <div>
                         <h3>{service.title} </h3>
-                        <img src={service.image} alt="service" />
+                        </div>
                         <p>{service.information}</p>
                         <p>{service.service_mileage}</p>
                         <p>{service.service_area}</p>

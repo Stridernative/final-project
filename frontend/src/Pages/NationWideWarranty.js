@@ -2,7 +2,7 @@ import React from 'react'
 
 const NationWideWarranty = () => {
     return (
-        <div>
+        <div className="services-card-warranty">
             Nationwide Warranty Available
 Nobody Protects You Like the Pros
 
