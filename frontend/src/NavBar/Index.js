@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { Button } from './Button.js'
 import Dropdown from './Dropdown.js';
 import './NavBar.css'
+import img from '../Images/TireProsLogo.png';
 
 
 function NavBar ( ) {
@@ -21,14 +22,13 @@ function NavBar ( ) {
              setDropdown(false);
         }
 
-
+        
 
     return (
 <>
     <nav className ='navbar'>
       <Link to="/" className='navbar-logo'>
-        <img src="" alt="" />
-        <i class='fab fa-firstdraft' />
+        <img className="logo" src={img} alt="Tire Pros" />
         </Link>
         <div className='menu-icon' onClick={handleClick}>
             <i className={click ? 'fas fa-times' : 'fas fa-bars'} />

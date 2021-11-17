@@ -81,7 +81,7 @@ function ServiceCard({ service, currentUser }) {
                         <p>{service.service_mileage}</p>
                         <p>{service.service_area}</p>
                         <Link to={'/appointments'}><button className='btn'>Schedule Appointment</button></Link>
-                        {currentUser ? <button onClick={toggleEdit}> Edit Service </button> : null}
+                        {currentUser ? <button className='btn-edit' onClick={toggleEdit}> Edit Service </button> : null}
                     </form>
                 </div>
             )

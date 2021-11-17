@@ -22,7 +22,7 @@ function App() {
   const [currentUser, setCurrentUser] = useState({})
 
   return (
-    <div >
+    <div className="App">
         <NavBar />
       <Routes>
         <Route exact path="/" element={<Home/>}/>
@@ -37,8 +37,6 @@ function App() {
         <Route exact path="/HassleFree" element={<HassleFree/>}/>
         <Route exact path="/RoadSide-Assistance" element={<RoadSideAssistance/>}/>
         <Route exact path="/250-Promise" element={<Promise/>}/>
-
-
         </Routes>
     </div>
   );
