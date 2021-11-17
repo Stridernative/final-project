@@ -11,6 +11,9 @@ import Warranties from './Pages/Warranties.js';
 import HassleFree from './Pages/HassleFree';
 import Login from './Login/Login'
 import EditForm from './Pages/EditForm';
+import NationWideWarranty from './Pages/NationWideWarranty';
+import RoadSideAssistance from './Pages/RoadSideAssistance';
+import Promise from './Pages/Promise';
 
 
 
@@ -30,6 +33,12 @@ function App() {
         <Route exact path="/Financing" element={<Financing/>}/>
         <Route exact path="/Login"  element={<Login setCurrentUser={setCurrentUser}/>}/>
         <Route exact path="/Edit-Service" element={<EditForm/>}/>
+        <Route exact path="/NationWide-Warranty" element={<NationWideWarranty/>}/>
+        <Route exact path="/HassleFree" element={<HassleFree/>}/>
+        <Route exact path="/RoadSide-Assistance" element={<RoadSideAssistance/>}/>
+        <Route exact path="/250-Promise" element={<Promise/>}/>
+
+
         </Routes>
     </div>
   );

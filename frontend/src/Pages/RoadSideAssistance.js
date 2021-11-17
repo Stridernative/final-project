@@ -51,4 +51,4 @@ The Tire Pros Roadside Assistance Services include:
     )
 }
 
-export default RoadSideAssistance
+export default RoadSideAssistance;

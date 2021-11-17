@@ -27,7 +27,7 @@ function NavBar ( ) {
 <>
     <nav className ='navbar'>
       <Link to="/" className='navbar-logo'>
-        Tire Pros Logo
+        <img src="" alt="" />
         <i class='fab fa-firstdraft' />
         </Link>
         <div className='menu-icon' onClick={handleClick}>
@@ -63,11 +63,11 @@ function NavBar ( ) {
              {dropdown && <Dropdown />}
             </li>
 
-            <li className='nav-item'>
+            {/* <li className='nav-item'>
                 <Link to='/Quotes' className='nav-links' onClick={closeMobileMenu}>
                     Quotes
                 </Link>
-            </li>
+            </li> */}
 
             <li className='nav-item'>
                 <Link to='/Login' className='nav-links-mobile' onClick={closeMobileMenu}>
