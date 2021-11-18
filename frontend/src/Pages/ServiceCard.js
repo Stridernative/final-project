@@ -46,6 +46,7 @@ function ServiceCard({ service, currentUser }) {
 
         if (editMode) {
             return (
+                
                 <div className="services-card">
                     <form onSubmit={updateService}>
                         <label> Title

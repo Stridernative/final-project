@@ -52,6 +52,13 @@ function NavBar ( ) {
                 </Link>
             </li>
 
+            <li className='nav-item'>
+                <Link to='/Financing' className='nav-links' onClick={closeMobileMenu}>
+                    Financing
+                </Link>
+            </li>
+
+
             <li className='nav-item'  
                 onMouseEnter={onMouseEnter}
                 onMouseLeave={onMouseLeave}>
@@ -63,6 +70,8 @@ function NavBar ( ) {
              {dropdown && <Dropdown />}
             </li>
 
+            
+          
             {/* <li className='nav-item'>
                 <Link to='/Quotes' className='nav-links' onClick={closeMobileMenu}>
                     Quotes
